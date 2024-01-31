@@ -241,7 +241,7 @@ img {
 }
 
 .app-content-image {
-  max-width: 245px;
+  width: 245px;
   border-radius: 24px;
   text-align: center;
   overflow: hidden;
@@ -252,4 +252,36 @@ img {
 .content-image {
   width: 100%;
   object-fit: contain;
+}
+
+/* ///////////////////////////////////////////////// */
+/* INFO */
+/* #more {
+  color: #267ff9;
+  cursor: pointer;
+} */
+.intro {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-info-content {
+  font-size: 13px;
+  color: #000;
+  font-weight: normal;
+  line-height: 17px;
+  margin-top: 20px;
+}
+.more {
+  color: #267ff9;
+  cursor: pointer;
+  /* display: inline-block;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 8px;
+  padding-left: 10px; */
+}
+.info-text {
+  padding-bottom: 15px;
 }
