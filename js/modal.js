@@ -1,10 +1,10 @@
-var modal = document.getElementById('modal');
-var modalBackdrop = document.querySelector('.modal-backdrop');
-var modalImage = document.getElementById('modal-image');
-var imageContainer = document.getElementById('image-container');
+const modal = document.getElementById('modal');
+const modalBackdrop = document.querySelector('.modal-backdrop');
+const modalImage = document.getElementById('modal-image');
+const imageContainer = document.getElementById('image-container');
 
 imageContainer.addEventListener('click', function (event) {
-  var targetImage = event.target.closest('.content-image');
+  const targetImage = event.target.closest('.content-image');
   if (targetImage) {
     openModal(targetImage.src);
   }
