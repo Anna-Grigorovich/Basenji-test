@@ -10,7 +10,7 @@ function openModal(
   const modalComment = document.getElementById('comment-modal');
   const modalText = document.getElementById('comment-modal-text');
 
-  // HTML для комментария и ответа
+  // Формируем HTML для комментария и ответа
   const modalContent = `
     <div class="comment-card">
       <div class="comment-card__backdrop" onclick="closeModalComment()"></div>
@@ -24,7 +24,7 @@ function openModal(
           <div class="review-item__rating">
             ${commentStars}
           </div>
-          
+          <div class="review-item__username">${username}</div>
         </div>
         <div class="review-item__text">${commentText}</div>
         ${
@@ -53,40 +53,50 @@ function closeModalComment() {
   modalComment.style.display = 'none';
 }
 
-// обработчик событий для родительского элемента
+// Назначьте обработчик событий для родительского элемента
 const reviewsWrapComment = document.getElementById('reviews-wrap');
 
 reviewsWrapComment.addEventListener('click', function (event) {
-  const target = event.target.closest('.app__review-item');
+  const moreButton = event.target.closest(
+    '.sm-landing-appstore-app-1-section-text__more',
+  );
 
-  if (target) {
-    const commentTitle = target.querySelector('.review-item__title').innerText;
-    const commentDate = target.querySelector('.review-item__date').innerText;
-    const commentStars = target.querySelector('.review-item__rating').innerHTML;
-    const username = target.querySelector('.review-item__username').innerText;
-    const commentText = target.querySelector('.review-item__text').innerText;
+  if (moreButton) {
+    const target = moreButton.closest('.app__review-item');
 
-    // Добавлено условие, чтобы проверить наличие элемента .review-item__answer-title и .review-item__answer-text
-    const answerTitleElement = target.querySelector(
-      '.review-item__answer-title',
-    );
-    const answerTextElement = target.querySelector('.review-item__response');
+    if (target) {
+      const commentTitle = target.querySelector(
+        '.review-item__title',
+      ).innerText;
+      const commentDate = target.querySelector('.review-item__date').innerText;
+      const commentStars = target.querySelector(
+        '.review-item__rating',
+      ).innerHTML;
+      const username = target.querySelector('.review-item__username').innerText;
+      const commentText = target.querySelector('.review-item__text').innerText;
 
-    const developerResponseTitle = answerTitleElement
-      ? answerTitleElement.innerText
-      : '';
-    const developerResponseText = answerTextElement
-      ? answerTextElement.innerText
-      : '';
+      // Добавлено условие, чтобы проверить наличие элемента .review-item__answer-title и .review-item__answer-text
+      const answerTitleElement = target.querySelector(
+        '.review-item__answer-title',
+      );
+      const answerTextElement = target.querySelector('.review-item__response');
 
-    openModal(
-      commentTitle,
-      commentDate,
-      commentStars,
-      username,
-      commentText,
-      developerResponseTitle,
-      developerResponseText,
-    );
+      const developerResponseTitle = answerTitleElement
+        ? answerTitleElement.innerText
+        : '';
+      const developerResponseText = answerTextElement
+        ? answerTextElement.innerText
+        : '';
+
+      openModal(
+        commentTitle,
+        commentDate,
+        commentStars,
+        username,
+        commentText,
+        developerResponseTitle,
+        developerResponseText,
+      );
+    }
   }
 });
