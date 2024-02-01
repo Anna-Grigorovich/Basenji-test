@@ -427,7 +427,8 @@
                           >Developer Response</span
                         >
                       </div>
-                      Thank you! We are pleased to know that 😊 Enjoy!
+                      <div class="review-item__response">Thank you! We are pleased to know that 😊 Enjoy!</div>
+                      
                       <span class="sm-landing-appstore-app-1-section-text__more"
                         >more</span
                       >
@@ -477,7 +478,9 @@ Tons of games, and I like that it remembers which ones I've played and stores th
                           >Developer Response</span
                         >
                       </div>
-                      Thank you! We are pleased to know that 😊 Enjoy!
+                                            <div class="review-item__response"> Thank you! We are pleased to know that 😊 Enjoy!</div> 
+
+                      
                       <span class="sm-landing-appstore-app-1-section-text__more"
                         >more</span
                       >
@@ -524,7 +527,7 @@ Tons of games, and I like that it remembers which ones I've played and stores th
                           >Developer Response</span
                         >
                       </div>
-                      Hey! Thank you for your feedback ❤️
+                      <div class="review-item__response">Hey! Thank you for your feedback ❤️</div>
                       <span class="sm-landing-appstore-app-1-section-text__more"
                         >more</span
                       >
@@ -568,7 +571,8 @@ Tons of games, and I like that it remembers which ones I've played and stores th
                           >Developer Response</span
                         >
                       </div>
-                      Great to hear! Thank you so much!
+                      <div class="review-item__response"> Great to hear! Thank you so much!</div> 
+                     
                       <span class="sm-landing-appstore-app-1-section-text__more"
                         >more</span
                       >
@@ -600,17 +604,15 @@ Tons of games, and I like that it remembers which ones I've played and stores th
       </div>
     </div>
 
-<!-- <div id="modal" class="modal">
-  <div id="modal-backdrop" class="modal-backdrop"></div>
-  <div class="modal-content">
-    
-    <img src="" alt="" id="modal-image" />
-  </div>
-</div> -->
+<div id="comment-modal" class="comment-card" style="display: none;">
+  <div class="comment-card__backdrop" onclick="closeModalComment()"></div>
+  <div class="comment-card__main" id="comment-modal-text"></div>
+</div>
+
 <div id="modal" class="modal">
   <div class="modal-backdrop" onclick="closeModal()"></div>
   <div class="modal-content" onclick="event.stopPropagation()">
-    <!-- <span class="close-button" onclick="closeModal()">&times;</span> -->
+  
     <img src="" alt="" id="modal-image" />
   </div>
 </div>
@@ -618,6 +620,8 @@ Tons of games, and I like that it remembers which ones I've played and stores th
     <script src="./js/modal.js"></script>
      <script src="./js/scrollComments.js"></script>
           <script src="./js/actionByGet.js"></script>
+                    <script src="./js/modalComments.js"></script>
+
 
   </body>
 </html>
