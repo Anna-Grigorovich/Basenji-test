@@ -95,35 +95,35 @@
               <div class="app-content-text">
                 <p class="app-content-text">Preview</p>
               </div>
-              <div class="app-content-image">
+              <div class="app-content-image" id="image-container">
                 <ul class="app-content-list">
                   <li class="app-content-item">
-                    <div class="app-content-image">
-                      <img class="content-image" src="./images/1.webp" alt="" />
+                    <div class="app-content-image" data-modal-target="modal">
+                      <img class="content-image"  src="./images/1.webp" alt="" />
                     </div>
                   </li>
                   <li class="app-content-item">
-                    <div class="app-content-image">
+                    <div class="app-content-image" data-modal-target="modal">
                       <img class="content-image" src="./images/2.webp" alt="" />
                     </div>
                   </li>
                   <li class="app-content-item">
-                    <div class="app-content-image">
+                    <div class="app-content-image" data-modal-target="modal">
                       <img class="content-image" src="./images/3.webp" alt="" />
                     </div>
                   </li>
                   <li class="app-content-item">
-                    <div class="app-content-image">
+                    <div class="app-content-image" data-modal-target="modal">
                       <img class="content-image" src="./images/4.webp" alt="" />
                     </div>
                   </li>
                   <li class="app-content-item">
-                    <div class="app-content-image">
+                    <div class="app-content-image" data-modal-target="modal">
                       <img class="content-image" src="./images/5.webp" alt="" />
                     </div>
                   </li>
                   <li class="app-content-item">
-                    <div class="app-content-image">
+                    <div class="app-content-image" data-modal-target="modal">
                       <img class="content-image" src="./images/6.webp" alt="" />
                     </div>
                   </li>
@@ -373,7 +373,7 @@
               <!-- ////////////////////////////////////////////////////////////// -->
               <!-- /* Reviews SECT */ -->
               <div class="app-reviews-section">
-                <div class="app-reviews-wrap">
+                <div class="app-reviews-wrap" id="reviews-wrap">
                   <!-- 1 -->
                   <div
                     class="app__review-item"
@@ -599,7 +599,23 @@ Tons of games, and I like that it remembers which ones I've played and stores th
         </div>
       </div>
     </div>
+
+<!-- <div id="modal" class="modal">
+  <div id="modal-backdrop" class="modal-backdrop"></div>
+  <div class="modal-content">
+    
+    <img src="" alt="" id="modal-image" />
+  </div>
+</div> -->
+<div id="modal" class="modal">
+  <div class="modal-backdrop" onclick="closeModal()"></div>
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <!-- <span class="close-button" onclick="closeModal()">&times;</span> -->
+    <img src="" alt="" id="modal-image" />
+  </div>
+</div>
     <script src="./js/showInfo.js"></script>
     <script src="./js/modal.js"></script>
+     <script src="./js/scrollComments.js"></script>
   </body>
 </html>
