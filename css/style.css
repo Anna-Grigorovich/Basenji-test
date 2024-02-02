@@ -1,13 +1,7 @@
-:root {
-  --font-ral: 'Raleway', sans-serif;
-  --color-blue: #007aff;
-  --color-gray: #919097;
-  --color-black: #020202;
-  --color-backgr-dark: #2f303a;
-  --color-backgr-white: #f5f5f5;
-  --color-backgr-gray: #f5f4fa;
+::-webkit-scrollbar {
+  width: initial;
+  height: initial;
 }
-
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--color-black);
@@ -97,6 +91,13 @@ img {
   flex-direction: row;
   width: 100%;
 }
+.img-logo {
+}
+@media (min-width: 768px) {
+  .img-logo {
+    width: 190px;
+  }
+}
 .app-head-info {
   padding-left: 13px;
   padding-right: 0;
@@ -122,6 +123,12 @@ img {
   line-height: 16px;
   margin-top: 6px;
   padding-left: 1px;
+}
+@media (min-width: 768px) {
+  .app-head-info__subheader {
+    margin-top: 7px;
+    font-size: 18px;
+  }
 }
 .app-head-button-appstore {
   background: #007aff;
@@ -186,7 +193,13 @@ img {
   color: inherit;
   height: 100%;
 }
-
+.rating-star {
+  margin-right: 4px;
+  display: flex;
+  gap: 2px;
+  width: 60px;
+  flex-direction: row-reverse;
+}
 @media (min-width: 768px) {
   .app-head-rating {
     margin-top: 20px;
@@ -201,6 +214,12 @@ img {
   color: inherit;
   height: 100%;
 }
+@media (min-width: 768px) {
+  .app-head-rating-rating {
+    padding-left: 24px;
+  }
+}
+
 .app-head-rating__main {
   font-size: 20px;
   display: flex;
@@ -380,7 +399,13 @@ img {
 }
 .info-link-wrap {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+@media (min-width: 640px) {
+  .info-link-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 /* ////////////////////////////////////////////// */
 /* RATING AND REVIEWS */
@@ -512,14 +537,12 @@ img {
   font-size: 13px;
   line-height: 127.34%;
   color: #000000;
-
+  margin-right: 8px;
   user-select: none;
   scroll-snap-align: start;
   cursor: grab;
 }
-/*     width: 100%;
-    display: inline-block;
-    max-height: 180px; */
+
 .app__review-item:active {
   cursor: grabbing;
 }
@@ -545,10 +568,6 @@ img {
   margin-top: 3px;
 }
 .review-item__info {
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px; */
 }
 .review-item__rating {
   display: flex;
@@ -581,20 +600,23 @@ img {
   line-height: 18px;
   max-height: 55px;
 }
-/*     max-height: 55px; */
+
+@media (min-width: 768px) {
+  .app-whats-new__in {
+    display: flex;
+    margin: 14px 0 0;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+
 .sm-landing-appstore-app-1-section-text__more {
-  /* color: #267ff9;
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  right: 8px;
-  padding-left: 10px; */
   background: #f3f2f8;
   bottom: 1px;
   right: 0px;
   color: #267ff9;
   display: inline-block;
-  /* background-color: #fff; */
+
   position: absolute;
   bottom: 0;
   right: 8px;
@@ -617,8 +639,7 @@ img {
   max-height: 45px;
   overflow: hidden;
 }
-/* max-height: 45px;
-    overflow: hidden; */
+
 .review-item__answer-main {
   display: flex;
   align-items: center;
@@ -713,7 +734,7 @@ img {
 
 .close-button {
   position: absolute;
-  top: 10px;
+  left: 10px;
   right: 10px;
   font-size: 15px;
   cursor: pointer;
@@ -729,4 +750,18 @@ img {
   margin-top: 11px;
   line-height: 18px;
   max-height: 45px;
+}
+
+.review-item-modal__text {
+  position: relative;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 127.34%;
+  color: #000000;
+  text-decoration: none;
+  /* overflow: hidden; */
+  cursor: pointer;
+  margin-top: 11px;
+  line-height: 18px;
+  /* max-height: 55px; */
 }

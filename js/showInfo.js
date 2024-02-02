@@ -12,5 +12,3 @@ moreEl.addEventListener('click', event => {
 
   moreEl.innerText = moreEl.innerText === 'more' ? 'less' : 'more';
 });
-
-console.log(moreEl);
