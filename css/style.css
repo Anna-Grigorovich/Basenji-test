@@ -464,12 +464,21 @@ img {
 }
 .info-link-wrap {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-@media (min-width: 640px) {
+.img-arrow {
+  width: 8px;
+  height: 13px;
+}
+@media (min-width: 768px) {
+  .img-arrow {
+    display: none;
+  }
   .info-link-wrap {
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
+    /* flex-direction: row;
+    justify-content: space-between; */
   }
 }
 /* ////////////////////////////////////////////// */
