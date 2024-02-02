@@ -1,12 +1,15 @@
-const elGet = document.querySelector('.app-head-button-appstore');
+const elGet = document.querySelectorAll('.get');
 const elGetLinkStore = document.querySelector('.getLink');
 
-elGet.addEventListener('click', handleButtonClick);
+elGet.forEach(button => {
+  button.addEventListener('click', handleButtonClick);
+});
+
 elGetLinkStore.addEventListener('click', handleButtonClick);
 
 function handleButtonClick(e) {
   e.preventDefault();
-  if (e.target === elGet) {
+  if (e.target.classList.contains('get')) {
     alert('Кнопка Get была нажата');
   } else if (e.target === elGetLinkStore) {
     alert('Линк был нажат');

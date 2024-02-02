@@ -80,7 +80,82 @@ img {
 .app-layout {
   width: 100%;
 }
+/* ...................HEADER.................. */
 
+.head-logo-img {
+  width: 32px;
+}
+.head-logo {
+  display: flex;
+  justify-content: space-around;
+}
+#site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(248, 248, 250, 0.8);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  height: 60px;
+  top: -100px;
+  width: 100%;
+  transition: 0.5s;
+  z-index: 5;
+}
+
+.head-logo-img {
+  width: 32px;
+}
+
+.head-logo {
+  margin-left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head-text-wrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.app-head-text {
+  color: #b9b9bb;
+  font-size: 8px;
+  max-width: 60px;
+  line-height: 10px;
+  height: 20px;
+  white-space: normal;
+  font-weight: 400;
+  text-align: end;
+  line-height: 113.34%;
+}
+
+.head-button {
+  background: #007aff;
+  border-radius: 28px;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 8px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  height: 24px;
+  line-height: 18px;
+  width: 62px;
+  vertical-align: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+/* ................................. */
 /* head app section */
 .app-head-wrap {
   padding: 15px 15px 0;
@@ -91,8 +166,7 @@ img {
   flex-direction: row;
   width: 100%;
 }
-.img-logo {
-}
+
 @media (min-width: 768px) {
   .img-logo {
     width: 190px;
@@ -351,10 +425,7 @@ img {
 
 /* ///////////////////////////////////////////////// */
 /* INFO */
-/* #more {
-  color: #267ff9;
-  cursor: pointer;
-} */
+
 .intro {
   display: flex;
   justify-content: space-between;
@@ -370,12 +441,6 @@ img {
 .more {
   color: #267ff9;
   cursor: pointer;
-  /* display: inline-block;
-  background-color: #fff;
-  position: absolute;
-  bottom: 0;
-  right: 8px;
-  padding-left: 10px; */
 }
 .info-text {
   padding-bottom: 15px;
