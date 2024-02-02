@@ -85,30 +85,6 @@ img {
 .head-logo-img {
   width: 32px;
 }
-.head-logo {
-  display: flex;
-  justify-content: space-around;
-}
-#site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(248, 248, 250, 0.8);
-  backdrop-filter: blur(10px);
-  color: white;
-  padding: 10px;
-  text-align: center;
-  position: fixed;
-  height: 60px;
-  top: -100px;
-  width: 100%;
-  transition: 0.5s;
-  z-index: 5;
-}
-
-.head-logo-img {
-  width: 32px;
-}
 
 .head-logo {
   margin-left: 50%;
@@ -155,6 +131,33 @@ img {
   justify-content: center;
   cursor: pointer;
 }
+#site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(248, 248, 250, 0.8);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  height: 60px;
+  top: 0;
+  width: 100%;
+  transition: 0.5s;
+  z-index: 5;
+}
+
+.head-logo-img {
+  width: 32px;
+}
+
+.head-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ................................. */
 /* head app section */
 .app-head-wrap {
